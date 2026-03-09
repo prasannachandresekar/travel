@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -128,28 +128,82 @@
     <!-- Main Content -->
     <main class="flex-grow-1">
 
-        <!-- SECTION 1: Page Title -->
-        <section class="section-padding custom-bg-alt pt-6 text-center">
-            <div class="container py-5 mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold text-dark mb-3">Contact Us</h1>
-                        <p class="lead text-muted px-md-4">
-                            We’re here to help you plan your next adventure.
+        <!-- SECTION 1: Page Hero -->
+        <section class="hero-section position-relative overflow-hidden d-flex align-items-center"
+            style="min-height: 40vh;">
+            <div class="hero-bg position-absolute w-100 h-100 top-0 start-0 z-0">
+                <img src="assets/images/contact-hero.jpg" alt="Contact Us" width="1920" height="600"
+                    class="w-100 h-100 object-fit-cover shadow-sm">
+                <div class="hero-overlay position-absolute w-100 h-100 top-0 start-0"
+                    style="background: rgba(15, 23, 42, 0.6);"></div>
+            </div>
+            <div class="container position-relative z-1">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <h1 class="display-3 fw-bold text-white mb-3 hero-title drop-shadow">Contact Us</h1>
+                        <p class="lead text-white text-opacity-75 drop-shadow px-md-4">
+                            Have questions or planning your next adventure? Get in touch with us.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: Contact Information -->
-        <section class="py-5 bg-transparent">
+        <!-- SECTION 2: Contact Form -->
+        <section class="section-padding custom-bg-alt pt-5 pb-4">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card custom-card-bg shadow-sm border-0 rounded-4 p-4 p-md-5">
+                            <h3 class="fw-bold text-dark mb-4 text-center">Send Us a Message</h3>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label text-dark fw-medium small">Your Name</label>
+                                            <input type="text" class="form-control rounded-3 py-2 custom-input"
+                                                placeholder="e.g. John Doe" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label text-dark fw-medium small">Email Address</label>
+                                            <input type="email" class="form-control rounded-3 py-2 custom-input"
+                                                placeholder="e.g. user@example.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label text-dark fw-medium small">Subject</label>
+                                    <input type="text" class="form-control rounded-3 py-2 custom-input"
+                                        placeholder="What is this regarding?" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label text-dark fw-medium small">Message</label>
+                                    <textarea class="form-control rounded-3 py-2 custom-input" rows="5"
+                                        placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit"
+                                        class="btn btn-primary btn-lg px-5 rounded-pill fw-bold shadow-sm border-0">Send
+                                        Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Contact Information -->
+        <section class="py-5 custom-bg-alt">
             <div class="container">
                 <div class="row g-4 justify-content-center text-center">
 
                     <!-- Card 1: Phone -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift">
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div
+                            class="card h-100 w-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift">
                             <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
                                 <i class="bi bi-telephone fs-3"></i>
@@ -160,8 +214,9 @@
                     </div>
 
                     <!-- Card 2: Email -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift">
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div
+                            class="card h-100 w-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift">
                             <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
                                 <i class="bi bi-envelope fs-3"></i>
@@ -172,20 +227,22 @@
                     </div>
 
                     <!-- Card 3: Location -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift">
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div
+                            class="card h-100 w-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift">
                             <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
                                 <i class="bi bi-geo-alt fs-3"></i>
                             </div>
                             <h5 class="fw-bold text-dark mb-2">Location</h5>
-                            <p class="text-muted small mb-0">120 Travel Street, Adventure City, World</p>
+                            <p class="text-muted small flex-grow-1 mb-0">120 Travel Street, Adventure City</p>
                         </div>
                     </div>
 
                     <!-- Card 4: Social Media -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift">
+                    <div class="col-md-6 col-lg-3 d-flex">
+                        <div
+                            class="card h-100 w-100 border-0 shadow-sm rounded-4 custom-card-bg p-4 transition hover-lift flex-column">
                             <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-4"
                                 style="width: 64px; height: 64px;">
                                 <i class="bi bi-share fs-3"></i>
@@ -212,12 +269,12 @@
             </div>
         </section>
 
-        <!-- SECTION 3: Map Placeholder -->
+        <!-- SECTION 4: Map Placeholder -->
         <section class="section-padding custom-bg-alt py-5 border-top border-opacity-10">
             <div class="container py-4">
                 <div class="row justify-content-center">
                     <div class="col-lg-10 text-center">
-                        <h3 class="fw-bold text-dark mb-4">Find Us</h3>
+                        <h3 class="fw-bold text-dark mb-4">Our Location</h3>
                         <div class="w-100 rounded-4 overflow-hidden border border-opacity-10 shadow-sm bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center flex-column"
                             style="height: 350px;">
                             <i class="bi bi-map text-muted text-opacity-50 display-1 mb-3"></i>
