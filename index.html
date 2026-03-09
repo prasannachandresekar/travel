@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triplo - Explore the World</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <div class="d-flex align-items-center gap-3 d-lg-none">
+                <!-- Mobile Dark Mode Toggle -->
+                <button class="btn btn-link nav-icon-btn dark-mode-toggle theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse" id="desktopMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3 fw-medium">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown border-0 shadow-sm rounded-3 mt-2"
+                            aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item fw-medium" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item fw-medium" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link nav-icon-btn dark-mode-toggle d-none d-lg-block theme-toggle"
+                        aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="dashboard.html"
+                        class="btn btn-link text-decoration-none fw-medium text-dark d-none d-lg-block px-1">Dashboard</a>
+                    <a href="login.html" class="btn btn-outline-primary px-4 rounded-pill fw-medium login-btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom border-opacity-10">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo">
+                <span class="visually-hidden" id="mobileMenuLabel">Triplo</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1 pe-3 fw-medium gap-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="homeMobileDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Home
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-none ps-3 bg-transparent"
+                        aria-labelledby="homeMobileDropdown">
+                        <li><a class="dropdown-item fw-medium" href="index.html">Home 1</a></li>
+                        <li><a class="dropdown-item fw-medium" href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="destinations.html">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="mt-auto pt-4 border-top border-opacity-10 d-grid gap-2">
+                <a href="dashboard.html" class="btn btn-outline-secondary rounded-pill py-2 fw-medium">Dashboard</a>
+                <a href="login.html" class="btn btn-primary rounded-pill py-2 fw-medium login-btn">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section position-relative overflow-hidden d-flex align-items-center">
+        <!-- Background Wrapper -->
+        <div class="hero-bg position-absolute w-100 h-100 top-0 start-0 z-0">
+            <img src="assets/images/hero.jpg" alt="Beautiful travel destination"
+                class="w-100 h-100 object-fit-cover shadow-sm">
+            <div class="hero-overlay position-absolute w-100 h-100 top-0 start-0"></div>
+        </div>
+
+        <div class="container position-relative z-1">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10 col-xl-8">
+                    <span
+                        class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-3 fw-medium text-uppercase tracking-wide">
+                        <i class="bi bi-airplane me-1"></i> Your Journey Begins
+                    </span>
+                    <h1 class="display-3 fw-bold text-white mb-4 hero-title drop-shadow">Explore the World with Triplo
+                    </h1>
+                    <p class="lead text-white text-opacity-75 mb-5 px-md-4 hero-subtitle drop-shadow">
+                        Discover breathtaking destinations and unforgettable adventures tailored just for you.
+                    </p>
+
+                    <!-- Search Form -->
+                    <div
+                        class="search-form-container bg-white p-2 p-md-3 rounded-pill shadow-lg mx-auto d-none d-md-block">
+                        <form class="row g-2 align-items-center m-0">
+                            <div class="col-md position-relative border-end border-opacity-25 px-3">
+                                <label class="form-label text-muted small fw-semibold mb-0 d-block text-start"><i
+                                        class="bi bi-geo-alt me-1 text-primary"></i> Location</label>
+                                <input type="text"
+                                    class="form-control form-control-sm border-0 bg-transparent px-0 shadow-none text-dark fw-medium"
+                                    placeholder="Where to?">
+                            </div>
+                            <div class="col-md position-relative border-end border-opacity-25 px-3">
+                                <label class="form-label text-muted small fw-semibold mb-0 d-block text-start"><i
+                                        class="bi bi-calendar-event me-1 text-primary"></i> Date</label>
+                                <input type="date"
+                                    class="form-control form-control-sm border-0 bg-transparent px-0 shadow-none text-dark fw-medium text-muted">
+                            </div>
+                            <div class="col-md position-relative px-3">
+                                <label class="form-label text-muted small fw-semibold mb-0 d-block text-start"><i
+                                        class="bi bi-people me-1 text-primary"></i> Guests</label>
+                                <select
+                                    class="form-select form-select-sm border-0 bg-transparent px-0 shadow-none text-dark fw-medium">
+                                    <option value="1">1 Person</option>
+                                    <option value="2" selected>2 Persons</option>
+                                    <option value="3">3+ Persons</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button"
+                                    class="btn btn-primary rounded-pill px-4 py-2 fw-semibold d-flex align-items-center gap-2">
+                                    <i class="bi bi-search"></i> Search
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Mobile CTA (Simplified Search) -->
+                    <div class="d-md-none d-grid gap-3">
+                        <button type="button" class="btn btn-primary btn-lg rounded-pill fw-semibold shadow">
+                            <i class="bi bi-search me-2"></i> Find Destinations
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Popular Destinations -->
+    <section id="destinations" class="section-padding custom-bg-alt">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase tracking-wide small mb-2 d-block">Top Picks</span>
+                <h2 class="display-6 fw-bold mb-3">Popular Destinations</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Explore our most sought-after locations,
+                    carefully curated for the ultimate travel experience.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 destination-card border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="card-img-wrapper position-relative overflow-hidden" style="height: 300px;">
+                            <img src="assets/images/destination1.jpg" class="w-100 h-100 object-fit-cover card-img-top"
+                                alt="Sahara Desert">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2 fw-bold shadow-sm">
+                                $899
+                            </span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column custom-card-bg">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title fw-bold mb-0">Sahara Desert</h4>
+                                <div class="d-flex align-items-center text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="text-muted ms-1">4.9</span>
+                                </div>
+                            </div>
+                            <p class="card-text text-muted small flex-grow-1">Experience the vast, breathtaking dunes of
+                                the Sahara with premium guided tours and cultural immersion.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-3 fw-medium">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 destination-card border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="card-img-wrapper position-relative overflow-hidden" style="height: 300px;">
+                            <img src="assets/images/destination2.jpg" class="w-100 h-100 object-fit-cover card-img-top"
+                                alt="Bali Island">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2 fw-bold shadow-sm">
+                                $1,250
+                            </span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column custom-card-bg">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title fw-bold mb-0">Bali Island</h4>
+                                <div class="d-flex align-items-center text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="text-muted ms-1">4.8</span>
+                                </div>
+                            </div>
+                            <p class="card-text text-muted small flex-grow-1">Discover pristine beaches, ancient
+                                temples, and lush landscapes in tropical paradise.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-3 fw-medium">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 destination-card border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="card-img-wrapper position-relative overflow-hidden" style="height: 300px;">
+                            <img src="assets/images/destination3.jpg" class="w-100 h-100 object-fit-cover card-img-top"
+                                alt="Swiss Alps">
+                            <span
+                                class="badge bg-white text-dark position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2 fw-bold shadow-sm">
+                                $1,499
+                            </span>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column custom-card-bg">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title fw-bold mb-0">Swiss Alps</h4>
+                                <div class="d-flex align-items-center text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span class="text-muted ms-1">5.0</span>
+                                </div>
+                            </div>
+                            <p class="card-text text-muted small flex-grow-1">Embark on a majestic mountain retreat with
+                                world-class skiing and luxurious cozy chalets.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill w-100 mt-3 fw-medium">View
+                                Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Travel Services -->
+    <section id="services" class="section-padding text-center">
+        <div class="container">
+            <div class="mb-5">
+                <span class="text-primary fw-bold text-uppercase tracking-wide small mb-2 d-block">What We Offer</span>
+                <h2 class="display-6 fw-bold mb-3">Travel Services</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">We provide comprehensive services to make your
+                    journey seamless and unforgettable.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-4">
+                    <div class="service-card p-4 rounded-4 custom-card-bg shadow-sm h-100">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="bi bi-compass fs-1"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Adventure Tours</h4>
+                        <p class="text-muted small mb-0">Thrilling excursions and outdoor activities designed for
+                            adrenaline seekers.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4">
+                    <div class="service-card p-4 rounded-4 custom-card-bg shadow-sm h-100">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="bi bi-airplane fs-1"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Luxury Trips</h4>
+                        <p class="text-muted small mb-0">Exclusive resort stays, private flights, and VIP experiences
+                            worldwide.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4">
+                    <div class="service-card p-4 rounded-4 custom-card-bg shadow-sm h-100">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 80px; height: 80px;">
+                            <i class="bi bi-globe fs-1"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Custom Travel Plans</h4>
+                        <p class="text-muted small mb-0">Personalized itineraries tailored to your unique preferences
+                            and schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Testimonials -->
+    <section id="testimonials" class="section-padding custom-bg-alt">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase tracking-wide small mb-2 d-block">Reviews</span>
+                <h2 class="display-6 fw-bold mb-3">What Our Travelers Say</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Hear from people who have experienced the magic
+                    of traveling with Triplo.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4">
+                    <div class="card testimonial-card border-0 shadow-sm rounded-4 custom-card-bg h-100 p-4">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="card-text text-muted flex-grow-1 fst-italic">"The Bali trip was absolutely phenomenal.
+                            Everything was perfectly organized from flights to our villa. Truly unforgettable!"</p>
+                        <div class="d-flex align-items-center mt-4 pt-3 border-top border-opacity-10">
+                            <img src="assets/images/user1.jpg" alt="Sarah Jenkins"
+                                class="rounded-circle object-fit-cover me-3 shadow-sm" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+                                <span class="text-muted small">Travel Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-md-4">
+                    <div class="card testimonial-card border-0 shadow-sm rounded-4 custom-card-bg h-100 p-4">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="card-text text-muted flex-grow-1 fst-italic">"Triplo's customer service is top-notch.
+                            Our custom Swiss Alps itinerary was tailored to perfection. Highly recommended!"</p>
+                        <div class="d-flex align-items-center mt-4 pt-3 border-top border-opacity-10">
+                            <img src="assets/images/user2.jpg" alt="Michael Chen"
+                                class="rounded-circle object-fit-cover me-3 shadow-sm" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Michael Chen</h6>
+                                <span class="text-muted small">Photographer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-md-4">
+                    <div class="card testimonial-card border-0 shadow-sm rounded-4 custom-card-bg h-100 p-4">
+                        <div class="text-warning mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="card-text text-muted flex-grow-1 fst-italic">"We opted for the Sahara Desert tour and
+                            it exceeded all expectations. Incredible guides and stunning scenery."</p>
+                        <div class="d-flex align-items-center mt-4 pt-3 border-top border-opacity-10">
+                            <img src="assets/images/user3.jpg" alt="Emily Davis"
+                                class="rounded-circle object-fit-cover me-3 shadow-sm" width="50" height="50">
+                            <div>
+                                <h6 class="mb-0 fw-bold">Emily Davis</h6>
+                                <span class="text-muted small">Adventurer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Travel Experts (Team) -->
+    <section id="team" class="section-padding text-center">
+        <div class="container">
+            <div class="mb-5">
+                <span class="text-primary fw-bold text-uppercase tracking-wide small mb-2 d-block">Our Experts</span>
+                <h2 class="display-6 fw-bold mb-3">Meet The Team</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Passionate travel enthusiasts dedicated to
+                    crafting your perfect journey.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Team 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="team-card p-4 custom-card-bg rounded-4 shadow-sm h-100">
+                        <div class="position-relative d-inline-block mb-4">
+                            <img src="assets/images/team1.jpg" alt="James Wilson"
+                                class="rounded-circle object-fit-cover border border-4 border-white shadow-sm team-img"
+                                width="160" height="160">
+                        </div>
+                        <h4 class="fw-bold mb-1">James Wilson</h4>
+                        <span class="text-primary small fw-medium text-uppercase tracking-wide d-block mb-3">Lead
+                            Guide</span>
+                        <p class="text-muted small mb-0">Over 10 years of experience leading adventure tours across five
+                            continents.</p>
+                    </div>
+                </div>
+                <!-- Team 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="team-card p-4 custom-card-bg rounded-4 shadow-sm h-100">
+                        <div class="position-relative d-inline-block mb-4">
+                            <img src="assets/images/team2.jpg" alt="Elena Rodriguez"
+                                class="rounded-circle object-fit-cover border border-4 border-white shadow-sm team-img"
+                                width="160" height="160">
+                        </div>
+                        <h4 class="fw-bold mb-1">Elena Rodriguez</h4>
+                        <span class="text-primary small fw-medium text-uppercase tracking-wide d-block mb-3">Travel
+                            Consultant</span>
+                        <p class="text-muted small mb-0">Specializes in curating luxury, customized travel itineraries
+                            in Europe.</p>
+                    </div>
+                </div>
+                <!-- Team 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="team-card p-4 custom-card-bg rounded-4 shadow-sm h-100">
+                        <div class="position-relative d-inline-block mb-4">
+                            <img src="assets/images/team3.jpg" alt="David Kim"
+                                class="rounded-circle object-fit-cover border border-4 border-white shadow-sm team-img"
+                                width="160" height="160">
+                        </div>
+                        <h4 class="fw-bold mb-1">David Kim</h4>
+                        <span class="text-primary small fw-medium text-uppercase tracking-wide d-block mb-3">Local
+                            Expert</span>
+                        <p class="text-muted small mb-0">Your go-to expert for finding hidden gems and authentic
+                            cultural experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA Section -->
+    <section id="contact" class="cta-section py-5 bg-primary text-white position-relative overflow-hidden">
+        <div class="cta-bg-pattern position-absolute w-100 h-100 top-0 start-0 opacity-10"></div>
+        <div class="container py-5 position-relative z-1">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4 drop-shadow">Ready for Your Next Adventure?</h2>
+                    <p class="lead mb-5 opacity-75 drop-shadow">Start planning your dream trip today. Let us handle the
+                        details while you enjoy the journey.</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                        <a href="#destinations"
+                            class="btn btn-light btn-lg rounded-pill fw-bold text-primary shadow">Explore
+                            Destinations</a>
+                        <a href="#" class="btn btn-outline-light btn-lg rounded-pill fw-bold border-2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 custom-footer-bg">
+        <div class="container py-4">
+            <div class="row g-5">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 pe-lg-5">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo footer-logo">
+                    </a>
+                    <p class="text-muted small lh-lg pe-4">Triplo brings you the best travel experiences, curating the
+                        finest destinations and ensuring your journey is nothing short of spectacular.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <h5 class="fw-bold mb-4 footer-title">Quick Links</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-3 small">
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Home</a></li>
+                        <li><a href="#services" class="text-muted text-decoration-none footer-link">About Us</a></li>
+                        <li><a href="#team" class="text-muted text-decoration-none footer-link">Our Team</a></li>
+                        <li><a href="#contact" class="text-muted text-decoration-none footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Destinations -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <h5 class="fw-bold mb-4 footer-title">Destinations</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-3 small">
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Sahara Desert</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Bali Island</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Swiss Alps</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">More Places</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter & Social -->
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4 footer-title">Newsletter</h5>
+                    <p class="text-muted small mb-4">Subscribe to our newsletter for travel tips, destination guides,
+                        and exclusive offers.</p>
+                    <form class="d-flex mb-4 gap-2">
+                        <input type="email"
+                            class="form-control rounded-pill bg-transparent border-opacity-25 shadow-none custom-input"
+                            placeholder="Email address">
+                        <button class="btn btn-primary rounded-pill px-4 fw-medium" type="button">Subscribe</button>
+                    </form>
+                    <div class="d-flex gap-3">
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition">
+                            <i class="bi bi-twitter fs-5"></i>
+                        </a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition">
+                            <i class="bi bi-youtube fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border-top border-opacity-10 mt-5 pt-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small mb-0">&copy; 2026 Triplo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#"
+                        class="text-muted text-decoration-none small mx-2 footer-link border-end pe-3 border-opacity-25">Privacy
+                        Policy</a>
+                    <a href="#" class="text-muted text-decoration-none small mx-2 footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 shadow-lg back-to-top"
+        id="backToTopBtn" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

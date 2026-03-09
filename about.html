@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Triplo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <div class="d-flex align-items-center gap-3 d-lg-none">
+                <!-- Mobile Dark Mode Toggle -->
+                <button class="btn btn-link nav-icon-btn dark-mode-toggle theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse" id="desktopMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3 fw-medium">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown border-0 shadow-sm rounded-3 mt-2"
+                            aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item fw-medium" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item fw-medium" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link nav-icon-btn dark-mode-toggle d-none d-lg-block theme-toggle"
+                        aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="dashboard.html"
+                        class="btn btn-link text-decoration-none fw-medium text-dark d-none d-lg-block px-1">Dashboard</a>
+                    <a href="login.html" class="btn btn-outline-primary px-4 rounded-pill fw-medium login-btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom border-opacity-10">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo">
+                <span class="visually-hidden" id="mobileMenuLabel">Triplo</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1 pe-3 fw-medium gap-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="homeMobileDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Home
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-none ps-3 bg-transparent"
+                        aria-labelledby="homeMobileDropdown">
+                        <li><a class="dropdown-item fw-medium" href="index.html">Home 1</a></li>
+                        <li><a class="dropdown-item fw-medium" href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="destinations.html">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="mt-auto pt-4 border-top border-opacity-10 d-grid gap-2">
+                <a href="dashboard.html" class="btn btn-outline-secondary rounded-pill py-2 fw-medium">Dashboard</a>
+                <a href="login.html" class="btn btn-primary rounded-pill py-2 fw-medium login-btn">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <main class="flex-grow-1">
+
+        <!-- SECTION 1: Page Hero -->
+        <section class="hero-section position-relative overflow-hidden d-flex align-items-center"
+            style="min-height: 40vh;">
+            <div class="hero-bg position-absolute w-100 h-100 top-0 start-0 z-0">
+                <img src="assets/images/about-hero.jpg" alt="About Triplo" width="1920" height="600"
+                    class="w-100 h-100 object-fit-cover shadow-sm">
+                <div class="hero-overlay position-absolute w-100 h-100 top-0 start-0"
+                    style="background: rgba(15, 23, 42, 0.6);"></div>
+            </div>
+            <div class="container position-relative z-1">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <h1 class="display-3 fw-bold text-white mb-3 hero-title drop-shadow">About Triplo</h1>
+                        <p class="lead text-white text-opacity-75 drop-shadow px-md-4">
+                            We help travelers discover the world’s most breathtaking destinations and unforgettable
+                            adventures.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Our Story -->
+        <section class="section-padding py-5 custom-bg-alt">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="position-relative overflow-hidden rounded-4 shadow-sm" style="height: 400px;">
+                            <img src="assets/images/about-travel.jpg" alt="Travel exploration" width="800" height="600"
+                                class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h6 class="text-primary fw-bold text-uppercase tracking-wide small mb-2">Who We Are</h6>
+                        <h2 class="display-6 fw-bold text-dark mb-4">Our Story</h2>
+                        <p class="text-muted mb-4">
+                            Triplo is a dedicated travel platform built for those who seek to explore destinations,
+                            plan epic adventures, and discover completely unique travel experiences around the world.
+                        </p>
+                        <p class="text-muted mb-4">
+                            Since our inception, we have strived to make global discovery accessible, seamless,
+                            and deeply memorable. By connecting travelers with expert guides and highly curated
+                            itineraries,
+                            we turn simple vacations into spectacular, life-changing journeys.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Why Choose Us -->
+        <section class="section-padding py-5 border-top border-bottom border-opacity-10">
+            <div class="container py-4">
+                <div class="row justify-content-center mb-5 text-center">
+                    <div class="col-lg-8">
+                        <h6 class="text-primary fw-bold text-uppercase tracking-wide small mb-2">Our Features</h6>
+                        <h2 class="display-6 fw-bold text-dark">Why Choose Triplo</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 custom-card-bg border-0 rounded-4 shadow-sm p-4 transition hover-lift">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-4"
+                                style="width: 72px; height: 72px;">
+                                <i class="bi bi-globe fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-3">Global Destinations</h4>
+                            <p class="text-muted small mb-0">Discover breathtaking and carefully vetted locations
+                                scattered across every continent.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 custom-card-bg border-0 rounded-4 shadow-sm p-4 transition hover-lift">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-4"
+                                style="width: 72px; height: 72px;">
+                                <i class="bi bi-compass fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-3">Expert Guides</h4>
+                            <p class="text-muted small mb-0">Our local travel specialists will help you plan the
+                                absolute perfect trip tailored to you.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 custom-card-bg border-0 rounded-4 shadow-sm p-4 transition hover-lift">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mx-auto mb-4"
+                                style="width: 72px; height: 72px;">
+                                <i class="bi bi-stars fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-3">Trusted Experiences</h4>
+                            <p class="text-muted small mb-0">Thousands of travelers trust Triplo to handle their premier
+                                and safe adventures year round.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Our Team -->
+        <section class="section-padding py-5 custom-bg-alt">
+            <div class="container py-4 text-center">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <h6 class="text-primary fw-bold text-uppercase tracking-wide small mb-2">The People</h6>
+                        <h2 class="display-6 fw-bold text-dark">Our Team</h2>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 bg-transparent h-100">
+                            <img src="assets/images/team1.jpg" width="400" height="400" alt="Team 1"
+                                class="rounded-circle object-fit-cover mx-auto mb-4 shadow-sm"
+                                style="width: 180px; height: 180px;">
+                            <h4 class="fw-bold text-dark mb-1">Alex Morgan</h4>
+                            <p class="text-primary fw-medium small mb-0">Adventure Specialist</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 bg-transparent h-100">
+                            <img src="assets/images/team2.jpg" width="400" height="400" alt="Team 2"
+                                class="rounded-circle object-fit-cover mx-auto mb-4 shadow-sm"
+                                style="width: 180px; height: 180px;">
+                            <h4 class="fw-bold text-dark mb-1">Elena Rodriguez</h4>
+                            <p class="text-primary fw-medium small mb-0">Luxury Travel Consultant</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 bg-transparent h-100">
+                            <img src="assets/images/team3.jpg" width="400" height="400" alt="Team 3"
+                                class="rounded-circle object-fit-cover mx-auto mb-4 shadow-sm"
+                                style="width: 180px; height: 180px;">
+                            <h4 class="fw-bold text-dark mb-1">David Kim</h4>
+                            <p class="text-primary fw-medium small mb-0">Logistics Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CTA -->
+        <section class="section-padding py-5 bg-primary">
+            <div class="container py-5 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold text-white mb-3">Start Your Journey With Triplo</h2>
+                        <p class="lead text-white text-opacity-75 mb-5">
+                            Explore incredible destinations and create unforgettable memories.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                            <a href="destinations.html"
+                                class="btn btn-light btn-lg rounded-pill fw-bold text-primary shadow-sm px-4">Explore
+                                Destinations <i class="bi bi-arrow-right ms-1"></i></a>
+                            <a href="contact.html"
+                                class="btn btn-outline-light border-2 btn-lg rounded-pill fw-bold px-4">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-5 custom-footer-bg mt-auto">
+        <div class="container py-4">
+            <div class="row g-5">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 pe-lg-5">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo footer-logo">
+                    </a>
+                    <p class="text-muted small lh-lg pe-4">Triplo brings you the best travel experiences, curating the
+                        finest destinations and ensuring your journey is nothing short of spectacular.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <h5 class="fw-bold mb-4 footer-title">Quick Links</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-3 small">
+                        <li><a href="index.html" class="text-muted text-decoration-none footer-link">Home</a></li>
+                        <li><a href="about.html" class="text-muted text-decoration-none footer-link">About Us</a></li>
+                        <li><a href="blog.html" class="text-muted text-decoration-none footer-link">Blog</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Destinations -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <h5 class="fw-bold mb-4 footer-title">Destinations</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-3 small">
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Sahara Desert</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Bali Island</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Swiss Alps</a></li>
+                        <li><a href="destinations.html" class="text-muted text-decoration-none footer-link">More
+                                Places</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter & Social -->
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4 footer-title">Newsletter</h5>
+                    <p class="text-muted small mb-4">Subscribe to our newsletter for travel tips, destination guides,
+                        and exclusive offers.</p>
+                    <form class="d-flex mb-4 gap-2">
+                        <input type="email"
+                            class="form-control rounded-pill bg-transparent border-opacity-25 shadow-none custom-input"
+                            placeholder="Email address">
+                        <button class="btn btn-primary rounded-pill px-4 fw-medium" type="button">Subscribe</button>
+                    </form>
+                    <div class="d-flex gap-3">
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-facebook fs-5"></i></a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-twitter fs-5"></i></a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border-top border-opacity-10 mt-5 pt-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small mb-0">&copy; 2026 Triplo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#"
+                        class="text-muted text-decoration-none small mx-2 footer-link border-end pe-3 border-opacity-25">Privacy
+                        Policy</a>
+                    <a href="#" class="text-muted text-decoration-none small mx-2 footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 shadow-lg back-to-top"
+        id="backToTopBtn" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

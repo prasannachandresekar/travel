@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Triplo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo">
+            </a>
+
+            <!-- Mobile Toggle -->
+            <div class="d-flex align-items-center gap-3 d-lg-none">
+                <!-- Mobile Dark Mode Toggle -->
+                <button class="btn btn-link nav-icon-btn dark-mode-toggle theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="bi bi-moon-stars"></i>
+                </button>
+                <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse" id="desktopMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3 fw-medium">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Home
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown border-0 shadow-sm rounded-3 mt-2"
+                            aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item fw-medium" href="index.html">Home 1</a></li>
+                            <li><a class="dropdown-item fw-medium" href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-link nav-icon-btn dark-mode-toggle d-none d-lg-block theme-toggle"
+                        aria-label="Toggle Dark Mode">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <a href="dashboard.html"
+                        class="btn btn-link text-decoration-none fw-medium text-dark d-none d-lg-block px-1">Dashboard</a>
+                    <a href="login.html" class="btn btn-outline-primary px-4 rounded-pill fw-medium login-btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileMenu"
+        aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom border-opacity-10">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo">
+                <span class="visually-hidden" id="mobileMenuLabel">Triplo</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <ul class="navbar-nav flex-grow-1 pe-3 fw-medium gap-2">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="homeMobileDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Home
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-none ps-3 bg-transparent"
+                        aria-labelledby="homeMobileDropdown">
+                        <li><a class="dropdown-item fw-medium" href="index.html">Home 1</a></li>
+                        <li><a class="dropdown-item fw-medium" href="home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="destinations.html">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="mt-auto pt-4 border-top border-opacity-10 d-grid gap-2">
+                <a href="dashboard.html" class="btn btn-outline-secondary rounded-pill py-2 fw-medium">Dashboard</a>
+                <a href="login.html" class="btn btn-primary rounded-pill py-2 fw-medium login-btn">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1">
+
+        <!-- SECTION 1: Page Hero -->
+        <section class="hero-section position-relative overflow-hidden d-flex align-items-center"
+            style="min-height: 40vh;">
+            <div class="hero-bg position-absolute w-100 h-100 top-0 start-0 z-0">
+                <img src="assets/images/blog-hero.jpg" alt="Travel Blog" width="1920" height="600"
+                    class="w-100 h-100 object-fit-cover shadow-sm">
+                <div class="hero-overlay position-absolute w-100 h-100 top-0 start-0"
+                    style="background: rgba(15, 23, 42, 0.6);"></div>
+            </div>
+            <div class="container position-relative z-1">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <h1 class="display-3 fw-bold text-white mb-3 hero-title drop-shadow">Travel Blog</h1>
+                        <p class="lead text-white text-opacity-75 drop-shadow px-md-4">
+                            Inspiration, guides, and tips to help you explore the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Blog Posts Grid -->
+        <section class="section-padding custom-bg-alt py-5 border-bottom border-opacity-10">
+            <div class="container py-4">
+                <div class="row g-4">
+
+                    <!-- Blog Card 1 -->
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div
+                            class="card w-100 custom-card-bg shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column transition hover-lift">
+                            <img src="assets/images/blog1.jpg" width="800" height="500"
+                                class="card-img-top object-fit-cover" alt="Hidden Destinations" style="height: 250px;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-2">1. Top 10 Hidden Travel Destinations</h5>
+                                <p class="card-text text-muted small flex-grow-1 mb-3">Explore these secret gems
+                                    untouched by mass tourism for your next quiet, serene, and breathtaking getaway.</p>
+                                <div
+                                    class="mt-auto d-flex justify-content-between align-items-center mb-3 text-muted small fw-medium">
+                                    <span>By Alex Morgan</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i> Oct 12, 2026</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary rounded-pill fw-medium px-4 w-100">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div
+                            class="card w-100 custom-card-bg shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column transition hover-lift">
+                            <img src="assets/images/blog2.jpg" width="800" height="500"
+                                class="card-img-top object-fit-cover" alt="Backpacking Europe" style="height: 250px;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-2">2. A Guide to Backpacking Across Europe
+                                </h5>
+                                <p class="card-text text-muted small flex-grow-1 mb-3">A complete itinerary, train route
+                                    maps, and the essential checklist to backpack through Europe perfectly.</p>
+                                <div
+                                    class="mt-auto d-flex justify-content-between align-items-center mb-3 text-muted small fw-medium">
+                                    <span>By Elena Rodriguez</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i> Oct 05, 2026</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary rounded-pill fw-medium px-4 w-100">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div
+                            class="card w-100 custom-card-bg shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column transition hover-lift">
+                            <img src="assets/images/blog3.jpg" width="800" height="500"
+                                class="card-img-top object-fit-cover" alt="Beaches" style="height: 250px;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-2">3. Best Beaches Around the World</h5>
+                                <p class="card-text text-muted small flex-grow-1 mb-3">From the white sands of Bora Bora
+                                    to hidden coves in the Mediterranean, discover paradise.</p>
+                                <div
+                                    class="mt-auto d-flex justify-content-between align-items-center mb-3 text-muted small fw-medium">
+                                    <span>By David Kim</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i> Sep 28, 2026</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary rounded-pill fw-medium px-4 w-100">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 4 -->
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div
+                            class="card w-100 custom-card-bg shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column transition hover-lift">
+                            <img src="assets/images/blog4.jpg" width="800" height="500"
+                                class="card-img-top object-fit-cover" alt="Budget Travel" style="height: 250px;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-2">4. How to Travel on a Budget</h5>
+                                <p class="card-text text-muted small flex-grow-1 mb-3">Actionable and straightforward
+                                    tips to dramatically reduce costs on flights, lodging, and daily meals.</p>
+                                <div
+                                    class="mt-auto d-flex justify-content-between align-items-center mb-3 text-muted small fw-medium">
+                                    <span>By Alex Morgan</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i> Sep 15, 2026</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary rounded-pill fw-medium px-4 w-100">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 5 -->
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div
+                            class="card w-100 custom-card-bg shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column transition hover-lift">
+                            <img src="assets/images/blog5.jpg" width="800" height="500"
+                                class="card-img-top object-fit-cover" alt="Adventure Travel" style="height: 250px;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-2">5. Adventure Travel: What You Need to Know
+                                </h5>
+                                <p class="card-text text-muted small flex-grow-1 mb-3">Safety guides, gear reviews, and
+                                    physical preparation tips for high-adrenaline adventure travel.</p>
+                                <div
+                                    class="mt-auto d-flex justify-content-between align-items-center mb-3 text-muted small fw-medium">
+                                    <span>By Elena Rodriguez</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i> Sep 02, 2026</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary rounded-pill fw-medium px-4 w-100">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 6 -->
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div
+                            class="card w-100 custom-card-bg shadow-sm border-0 rounded-4 overflow-hidden d-flex flex-column transition hover-lift">
+                            <img src="assets/images/blog6.jpg" width="800" height="500"
+                                class="card-img-top object-fit-cover" alt="Tropical Vacation" style="height: 250px;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h5 class="card-title fw-bold text-dark mb-2">6. Planning the Perfect Tropical Vacation
+                                </h5>
+                                <p class="card-text text-muted small flex-grow-1 mb-3">Pick the right islands, the best
+                                    season, and perfectly timed bookings for your ultimate getaway in the sun.</p>
+                                <div
+                                    class="mt-auto d-flex justify-content-between align-items-center mb-3 text-muted small fw-medium">
+                                    <span>By David Kim</span>
+                                    <span><i class="bi bi-calendar3 me-1"></i> Aug 21, 2026</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary rounded-pill fw-medium px-4 w-100">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Newsletter -->
+        <section class="section-padding py-5">
+            <div class="container py-4 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-9">
+                        <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 72px; height: 72px;">
+                            <i class="bi bi-envelope-paper fs-2"></i>
+                        </div>
+                        <h2 class="display-6 fw-bold text-dark mb-3">Get Travel Inspiration</h2>
+                        <p class="text-muted mb-5">Subscribe to our newsletter for travel tips, guides, and destination
+                            ideas.</p>
+
+                        <form class="d-flex flex-column flex-sm-row gap-3 justify-content-center mx-auto"
+                            style="max-width: 500px;">
+                            <input type="email"
+                                class="form-control form-control-lg rounded-pill custom-input px-4 shadow-sm"
+                                placeholder="Email address" required>
+                            <button type="submit"
+                                class="btn btn-primary btn-lg rounded-pill fw-bold px-4 shadow-sm">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-5 custom-footer-bg mt-auto">
+        <div class="container py-4">
+            <div class="row g-5">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 pe-lg-5">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-4" href="index.html">
+                        <img src="assets/images/logo.svg" alt="Triplo Logo" height="36" class="brand-logo footer-logo">
+                    </a>
+                    <p class="text-muted small lh-lg pe-4">Triplo brings you the best travel experiences, curating the
+                        finest destinations and ensuring your journey is nothing short of spectacular.</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <h5 class="fw-bold mb-4 footer-title">Quick Links</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-3 small">
+                        <li><a href="index.html" class="text-muted text-decoration-none footer-link">Home</a></li>
+                        <li><a href="about.html" class="text-muted text-decoration-none footer-link">About Us</a></li>
+                        <li><a href="blog.html" class="text-muted text-decoration-none footer-link">Blog</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Destinations -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <h5 class="fw-bold mb-4 footer-title">Destinations</h5>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-3 small">
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Sahara Desert</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Bali Island</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none footer-link">Swiss Alps</a></li>
+                        <li><a href="destinations.html" class="text-muted text-decoration-none footer-link">More
+                                Places</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter & Social -->
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4 footer-title">Newsletter</h5>
+                    <p class="text-muted small mb-4">Subscribe to our newsletter for travel tips, destination guides,
+                        and exclusive offers.</p>
+                    <form class="d-flex mb-4 gap-2">
+                        <input type="email"
+                            class="form-control rounded-pill bg-transparent border-opacity-25 shadow-none custom-input"
+                            placeholder="Email address">
+                        <button class="btn btn-primary rounded-pill px-4 fw-medium" type="button">Subscribe</button>
+                    </form>
+                    <div class="d-flex gap-3">
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-facebook fs-5"></i></a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-instagram fs-5"></i></a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-twitter fs-5"></i></a>
+                        <a href="#"
+                            class="social-icon-wrapper rounded-circle d-flex align-items-center justify-content-center text-decoration-none transition"><i
+                                class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border-top border-opacity-10 mt-5 pt-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted small mb-0">&copy; 2026 Triplo. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#"
+                        class="text-muted text-decoration-none small mx-2 footer-link border-end pe-3 border-opacity-25">Privacy
+                        Policy</a>
+                    <a href="#" class="text-muted text-decoration-none small mx-2 footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 shadow-lg back-to-top"
+        id="backToTopBtn" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
