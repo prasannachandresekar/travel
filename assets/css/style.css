@@ -419,6 +419,30 @@ h6 {
     width: 100%;
 }
 
+/* Dark mode offcanvas navigation visibility */
+[data-theme="dark"] .mobile-offcanvas .nav-link {
+    color: #cbd5f5;
+}
+
+[data-theme="dark"] .mobile-offcanvas .nav-link:hover {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .mobile-offcanvas .nav-link.active {
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+/* Dropdown items inside offcanvas */
+[data-theme="dark"] .mobile-offcanvas .dropdown-item {
+    color: #e5e7eb;
+}
+
+[data-theme="dark"] .mobile-offcanvas .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #60a5fa;
+}
+
 /* --- USER PROVIDED NAVBAR FIX --- */
 /* Navbar default (light mode) */
 .navbar {
