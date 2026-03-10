@@ -287,10 +287,23 @@ h6 {
 /* Testimonials */
 .testimonial-card {
     border: 1px solid var(--border-color);
+    height: 100%;
+}
+
+.testimonial-card p {
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .testimonial-card h6 {
     color: var(--text-dark);
+}
+
+.row.g-4>div {
+    display: flex;
 }
 
 /* Team */
@@ -609,7 +622,7 @@ body {
 }
 
 .row {
-    --bs-gutter-x: 0;
+    --bs-gutter-x: 1.5rem;
 }
 
 [class*="col-"] {
@@ -649,4 +662,64 @@ img.footer-logo {
 
 .testimonial-card {
     padding: 1.5rem;
+}
+
+/* Fix date picker icon in dark mode */
+[data-theme="dark"] input[type="date"] {
+    color-scheme: dark;
+}
+
+/* Fix select dropdown in dark mode */
+[data-theme="dark"] select.form-select {
+    background-color: transparent;
+    color: #f8fafc;
+}
+
+[data-theme="dark"] select.form-select option {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+/* Destination rating badge fix for dark mode */
+[data-theme="dark"] .destination-card .badge {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Fix destination price badge in dark mode */
+[data-theme="dark"] .destination-card .badge {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Fix testimonial alignment */
+.testimonial-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonial-card .card-body p {
+    flex-grow: 1;
+}
+
+.testimonial-card .card-body h6 {
+    margin-top: auto;
+}
+
+.destination-card .btn {
+    white-space: nowrap;
+}
+
+.dashboard-stat-card {
+    border-bottom: 4px solid transparent !important;
+}
+
+.login-logo {
+    height: 36px;
+    width: auto;
+    display: block;
+    margin: auto;
 }
