@@ -723,3 +723,32 @@ img.footer-logo {
     display: block;
     margin: auto;
 }
+
+/* Center team section cards */
+.team-section .card{
+max-width:260px;
+margin:auto;
+text-align:center;
+}
+
+.team-section img{
+display:block;
+margin:auto;
+}
+
+/* Destination card footer alignment fix */
+.destination-card-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+@media (max-width:992px){
+.destination-card-footer{
+flex-direction:column;
+align-items:flex-start;
+}
+}
+
